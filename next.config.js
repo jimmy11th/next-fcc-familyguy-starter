@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+  customAppFile: 'app.js',
   images: {
     remotePatterns: [
       {
