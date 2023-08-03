@@ -9,12 +9,13 @@ import { Container } from '@/components'
 import { getAllCharacters } from 'lib/characters.js'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import InstagramPost from '../components/Card'
 export default async function Page() {
   const data = await getAllCharacters()
   return (
     <main>
       <Container className="grid grid-cols-2 gap-1 py-5 md:grid-cols-3 lg:grid-cols-4">
+        <InstagramPost />
         {data?.characters?.map(item => {
           return (
             <Link
